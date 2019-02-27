@@ -11,7 +11,6 @@ server.use('/static', express.static('assets'))
 
 server.get('/*', (req,res) => {
     const context = {};
-    console.log(`Req server`)
     const app = renderToString(
         <StaticRouter location={req.url} context={context}>
             <App />
